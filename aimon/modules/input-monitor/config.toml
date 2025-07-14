@@ -1,0 +1,31 @@
+# Input Monitor Configuration
+
+# Server configuration
+output_url = "http://localhost:8080/api/events"
+# api_key = "your-api-key-here"
+
+# RabbitMQ configuration (optional)
+# rabbitmq_url = "amqp://localhost:5672"
+rabbitmq_exchange = "activity_events"
+rabbitmq_routing_key = "input.events"
+
+# Monitoring settings
+track_mouse_movement = false
+screenshot_enabled = true
+screenshot_interval_secs = 300  # 5 minutes
+screenshot_quality = 75
+
+# Performance settings
+batch_size = 100
+batch_timeout_ms = 5000
+max_retries = 3
+retry_delay_ms = 1000
+
+# Privacy settings
+filter_passwords = true
+excluded_apps = [
+    "KeePass",
+    "1Password", 
+    "Bitwarden",
+    "LastPass"
+]

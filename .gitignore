@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+*.pyc
+__pycache__/
+.Python
+env/
+venv/
+.env
+
+# Build outputs
+dist/
+build/
+target/
+*.egg-info/
+.eggs/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.jest/
+
+# Docker volumes
+*_data/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Local config
+*.local
+config.local.json
+
+# Rust
+Cargo.lock
+target/

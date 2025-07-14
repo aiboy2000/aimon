@@ -1,0 +1,89 @@
+warning: unreachable expression
+  --> src/main.rs:71:5
+   |
+34 |         return Ok(());
+   |         ------------- any code following this expression is unreachable
+...
+71 |     Ok(())
+   |     ^^^^^^ unreachable expression
+   |
+   = note: `#[warn(unreachable_code)]` on by default
+
+warning: associated functions `new_key_press`, `new_key_release`, `new_mouse_click`, `new_mouse_move`, `new_mouse_scroll`, and `new_screenshot` are never used
+   --> src/events.rs:72:12
+    |
+71  | impl InputEvent {
+    | --------------- associated functions in this implementation
+72  |     pub fn new_key_press(key: String, modifiers: Vec<String>) -> Self {
+    |            ^^^^^^^^^^^^^
+...
+80  |     pub fn new_key_release(key: String, modifiers: Vec<String>) -> Self {
+    |            ^^^^^^^^^^^^^^^
+...
+88  |     pub fn new_mouse_click(button: MouseButton, x: f64, y: f64) -> Self {
+    |            ^^^^^^^^^^^^^^^
+...
+96  |     pub fn new_mouse_move(x: f64, y: f64) -> Self {
+    |            ^^^^^^^^^^^^^^
+...
+103 |     pub fn new_mouse_scroll(delta_x: f64, delta_y: f64, x: f64, y: f64) -> Self {
+    |            ^^^^^^^^^^^^^^^^
+...
+111 |     pub fn new_screenshot(data: String, format: String) -> Self {
+    |            ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: associated function `new` is never used
+   --> src/events.rs:121:12
+    |
+120 | impl EventMetadata {
+    | ------------------ associated function in this implementation
+121 |     pub fn new() -> Self {
+    |            ^^^
+
+warning: function `get_session_id` is never used
+   --> src/events.rs:130:4
+    |
+130 | fn get_session_id() -> String {
+    |    ^^^^^^^^^^^^^^
+
+warning: function `get_device_id` is never used
+   --> src/events.rs:135:4
+    |
+135 | fn get_device_id() -> String {
+    |    ^^^^^^^^^^^^^
+
+warning: `input-monitor` (bin "input-monitor" test) generated 5 warnings
+warning: `input-monitor` (bin "input-monitor") generated 5 warnings (5 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.56s
+     Running unittests src/lib.rs (target/debug/deps/input_monitor-c19a4b55e2a4acac)
+
+running 1 test
+test config::tests::test_default_config ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/input_monitor-e584881adf51cc97)
+
+running 1 test
+test config::tests::test_default_config ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/integration_tests.rs (target/debug/deps/integration_tests-d0944179fda57d34)
+
+running 4 tests
+test test_mouse_event_creation ... ok
+test test_config_validation ... ok
+test test_event_creation ... ok
+test test_event_serialization ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+   Doc-tests input_monitor
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
